@@ -6,7 +6,7 @@ import {Accordion,AccordionItem,AccordionTrigger,AccordionContent} from '@/compo
 import {Button} from '@/components/ui/button';
 import site from '@/content/site';
 import {localPath,withBasePaths} from '@/lib/paths';
-import {labels,type Lang} from '@/content/labels';
+import {DEFAULT_LANG,labels,type Lang} from '@/content/labels';
 
 type Project=typeof site.uz.projects[number];
 type News=typeof site.uz.news[number];
@@ -17,7 +17,7 @@ const groupIcons=[Zap,Sun,Factory];
 function Rich({html,className=''}:{html:string;className?:string}){return <div className={`rich ${className}`} dangerouslySetInnerHTML={{__html:html}}/>}
 function Socials({full=false}:{full?:boolean}){return <div className={`socials ${full?'socials-full':''}`}>{socials.map(({label,url,icon})=><a key={label} href={url} target="_blank" rel="noopener noreferrer" aria-label={label}><img className="social-icon" src={localPath(`/icons/${icon}.svg`)} alt="" width="19" height="19"/>{full&&<span>{label}</span>}</a>)}</div>}
 
-export default function NuraSite({lang='uz',slug=[]}:{lang?:Lang;slug?:string[]}){
+export default function NuraSite({lang=DEFAULT_LANG,slug=[]}:{lang?:Lang;slug?:string[]}){
  const t=labels[lang];const d=site[lang];const page=slug[0]||'home';const id=slug[1];const [menuOpen,setMenuOpen]=useState(false);
  const href=(p='')=>localPath(`/${lang}${p?'/'+p:''}`);
  useEffect(()=>{

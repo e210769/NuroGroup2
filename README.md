@@ -1,6 +1,6 @@
 # NURA Group website
 
-Portable Next.js website in Uzbek, Russian and English, using self-hosted Golos Text. Business, project, news, careers, partnership and contact pages are exported to static HTML with client-side navigation interactions and animations.
+Portable Next.js website in Russian, Uzbek and English, with Russian as the default language and self-hosted Golos Text. Body text uses medium weight; headings and buttons use semibold weight. Business, project, news, careers, partnership and contact pages are exported to static HTML with client-side navigation interactions and animations.
 
 ## Local development
 
