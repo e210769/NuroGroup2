@@ -13,3 +13,4 @@ country:'From Uzbekistan. Towards new possibilities.',eyebrow:'INFRASTRUCTURE HO
 }
 };
 export type Lang=keyof typeof labels;
+export const DEFAULT_LANG: Lang = 'ru';
